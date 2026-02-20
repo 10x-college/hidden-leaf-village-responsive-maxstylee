@@ -1,0 +1,97 @@
+.naruto-style {
+  font-family: "Permanent Marker", cursive;
+  color: #FF9900;
+  font-style: italic;
+  background: linear-gradient(to bottom, #FFD700 0%, #FF9900 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  transition: transform 0.3s ease;
+}
+.naruto-style:hover {
+  transform: scale(1.1) rotate(-2deg);
+  cursor: pointer;
+}
+
+.wrapper-background {
+  width: 100%;
+  min-height: 450px;
+  background: radial-gradient(circle, rgba(255, 153, 0, 0.2) 0%, rgb(17, 17, 17) 80%);
+  background-color: #111;
+  border-top: 1px solid #FF9900;
+  border-bottom: 1px solid #FF9900;
+}
+
+@media (min-width: 700px) {
+  .grid-wrapper {
+    grid-template-columns: repeat(2, 1fr);
+    place-items: center;
+  }
+  #DropButton {
+    display: none;
+  }
+  #DropDownMenu {
+    position: relative;
+    width: 431px;
+    padding: 0;
+    transform: translateX(0);
+    transition: transform 0.1s ease;
+    padding: 20px 0;
+  }
+  #DropDownMenu ul {
+    display: flex;
+    justify-content: space-between;
+  }
+  #DropDownMenu ul li {
+    font-style: normal;
+    margin: 0;
+    font-size: 17px;
+  }
+  .section-navigation {
+    display: flex;
+    justify-content: center;
+  }
+  .welcome-background-wrapper {
+    background-position: left 0 top -100px;
+  }
+  .background-wrapper {
+    text-align: center;
+  }
+  .background-wrapper h1 {
+    font-size: 32px;
+  }
+  .background-wrapper p {
+    font-size: 16px;
+  }
+  .welcome-background-wrapper h2 {
+    font-size: 32px;
+  }
+  .welcome-background-wrapper p {
+    font-size: 14px;
+  }
+}
+@media (min-width: 1100px) {
+  .grid-wrapper {
+    width: 1032px;
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .background-wrapper {
+    text-align: center;
+  }
+  .background-wrapper h1 {
+    font-size: 40px;
+  }
+  .background-wrapper p {
+    font-size: 18px;
+  }
+  .welcome-background-wrapper {
+    background-position: left 0 top -250px;
+  }
+  .welcome-background-wrapper h2 {
+    font-size: 40px;
+  }
+  .welcome-background-wrapper p {
+    font-size: 18px;
+  }
+}
+
+/*# sourceMappingURL=responsive.css.map */

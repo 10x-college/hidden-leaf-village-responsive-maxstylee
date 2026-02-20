@@ -1,0 +1,333 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Hanken+Grotesk:ital,wght@0,100..900;1,100..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Kumbh+Sans:wght,YOPQ@100..900,300&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Outfit:wght@100..900&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&family=Quicksand:wght@300..700&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.background-wrapper {
+    background-image: url(./image/Hidden\ Leaf.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding: 40px;
+}
+
+.background-wrapper span {
+    background-color: rgba(0, 0, 0, 0.7);
+    border-radius: 15px 5px;
+    display: flex;
+    align-items: center;
+    display: inline;
+    padding: 0 12px;
+}
+
+.background-wrapper span img {
+    position: relative;
+    top: 2px;
+    right: 1px;
+}
+
+.background-wrapper h1 {
+    font-size: 24px;
+    font-weight: 700;
+    color: rgb(255, 242, 0);
+    font-family: "Inter", sans-serif;
+    margin-bottom: 5px;
+}
+
+.background-wrapper p {
+    font-size: 14px;
+    font-weight: 500;
+    color: #3aaafd;
+    font-style: italic;
+    font-family: "Inter", sans-serif;
+    display: inline;
+    -webkit-box-decoration-break: clone;
+    background-color: #00000068;
+    border-radius: 13px;
+    padding: 0 7px;
+}
+
+.section-navigation {
+    background-color: black;
+    padding: 17px 13px;
+}
+
+.section-navigation button {
+    padding: 7px 17px 7px 13px;
+    border-radius: 8px;
+    background-color: rgba(255, 107, 26, 1);
+    color: white;
+    font-size: 19px;
+    font-weight: 500;
+    font-family: "Inter", sans-serif;
+    border: none;
+    cursor: pointer;
+}
+
+.section-navigation button:hover {
+    background-color: rgb(255, 141, 79);
+}
+
+/* საწყისი მდგომარეობა: დამალულია */
+#DropDownMenu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 40%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    border-radius: 0 10px 10px 0;
+    padding: 70px 145px 0 20px;
+    border-left: none;
+    transform: translateX(-100%);
+    transition: transform 0.5s ease;
+    z-index: 999;
+}
+
+#DropDownMenu.active {
+    transform: translateX(0);
+}
+
+#DropDownMenu ul li {
+    position: relative;
+    color: white;
+    display: inline-block;
+    list-style-type: none;
+    font-size: 17px;
+    font-weight: 500;
+    margin-bottom: 20px;
+    font-style: italic;
+    padding-bottom: 2px;
+    cursor: pointer;
+
+}
+
+#DropDownMenu ul li::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 1px;
+    background-color: gold;
+    transition: width 0.4s ease;
+}
+
+#DropDownMenu ul li:hover::after {
+    width: 100%;
+    left: 0;
+}
+
+#overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease-in-out;
+    z-index: 0;
+}
+
+#overlay.active {
+    opacity: 1;
+    visibility: visible;
+    z-index: 10;
+}
+
+.welcome-background-wrapper {
+    background-image: url(./image/welcometokonoha.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding: 137px 25px;
+    text-align: center;
+}
+
+.welcome-background-wrapper h2 {
+    font-size: 24px;
+    font-weight: 800;
+    color: rgb(70 152 38);
+    font-family: "Inter", sans-serif;
+    letter-spacing: 1px;
+    margin-bottom: 8px;
+    text-shadow: 2px 2px 0px rgba(0, 0, 0, 0.8),
+        4px 4px 8px rgba(0, 0, 0, 0.3);
+    margin-bottom: 20px;
+}
+
+.welcome-background-wrapper p {
+    color: rgba(255, 143, 0, 0.9);
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 1.6;
+    padding-left: 15px;
+    text-shadow: 1px 2px 1px rgba(0, 0, 0, 0.8);
+    font-style: italic;
+}
+
+
+/* header finished here */
+
+
+/* Main start */
+.wrapper-background {
+    background-color: orange;
+    display: flex;
+    justify-content: center;
+}
+
+.grid-wrapper {
+    display: grid;
+    justify-content: center;
+    padding: 35px 0 160px 0;
+    gap: 30px;
+}
+
+.jutsu-wrapper {
+    position: relative;
+    padding: 24px;
+    width: 325px;
+    border-radius: 12px;
+    overflow: hidden;
+    color: white;
+    border-top: 4px solid rgba(255, 107, 26, 1)
+}
+
+.jutsu-wrapper::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    background-position: top;
+    background-size: cover;
+    background-repeat: no-repeat;
+    filter: brightness(0.4);
+    transition: filter 0.3s ease;
+}
+
+.minato::before {
+    background-image: url('./video/minato-standing.gif');
+}
+
+.kakashi::before {
+    background-image: url('./video/kakashi-standing.gif');
+}
+
+.sasuke::before {
+    background-image: url('./video/standing-fire.gif');
+}
+
+.naruto::before {
+    background-image: url('./video/naruto-standing.gif');
+}
+
+.madara::before {
+    background-image: url('./video/madara-standing.gif');
+}
+
+.dragon::before {
+    background-image: url('./video/water-dragon-standing.gif');
+}
+
+.jutsu-gif {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    filter: brightness(1.1);
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+    z-index: 3;
+}
+
+.jutsu-wrapper:hover {
+    border-top: 4px solid black;
+
+}
+
+.jutsu-wrapper:hover .jutsu-gif {
+    opacity: 1;
+}
+
+.minato-jutsu-gif {
+    background-image: url('./video/minato-rasengan.gif');
+}
+
+.kakashi-jutsu-gif {
+    background-image: url('./video/kakashi-chidori.gif');
+}
+
+.sasuke-jutsu-gif {
+    background-image: url('./video/sasuke-fireball.gif');
+}
+
+.naruto-jutsu-gif {
+    background-image: url('./video/naruto-clones.gif');
+    filter: brightness(0.9);
+}
+
+.itachi-jutsu-gif {
+    background-image: url('./video/itashi-sharingan.gif');
+}
+
+.dragon-jutsu-gif {
+    background-image: url('./video/water-dragon-gif.gif');
+}
+
+
+.position-index {
+    position: relative;
+    z-index: 2;
+}
+
+.jutsu-wrapper h3 img {
+    margin-right: 5px;
+}
+
+.jutsu-wrapper h3 {
+    display: flex;
+    align-items: center;
+    font-size: 24px;
+    font-weight: 700;
+    font-family: "Inter", sans-serif;
+    color: rgb(255, 255, 255);
+    margin-bottom: 10px;
+}
+
+.jutsu-wrapper p {
+    font-size: 16px;
+    font-weight: 400;
+    font-family: "Inter", sans-serif;
+    color: rgb(169, 169, 169);
+}
+
+footer {
+    padding: 38px 20px;
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+footer p {
+    color: white;
+    font-size: 12px;
+    font-weight: 500px;
+    font-family: "Inter", sans-serif;
+
+}
